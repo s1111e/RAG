@@ -1,0 +1,5 @@
+Simple English Wikipedia
+
+Simple English Wikipedia is a version of Wikipedia that uses shorter sentences and simpler vocabulary than the main English edition. It is designed for readers who are learning English or who prefer easier text. Articles still follow the same general encyclopedia style, with headings, summaries, and references.
+
+Because the language is simpler, extracts from Simple English Wikipedia can be easier to use in retrieval experiments. The pages are often concise, which makes them practical for building small RAG demonstrations and teaching systems. A collection of Simple English articles can therefore serve as a lightweight knowledge base for testing search and generation pipelines.

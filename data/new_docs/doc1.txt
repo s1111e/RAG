@@ -1,0 +1,5 @@
+Retrieval Augmented Generation
+
+Retrieval augmented generation, often shortened to RAG, is an approach that combines information retrieval with text generation. A retriever first selects relevant passages from a knowledge source, and a generator then uses those passages to answer a question. The method is popular in question answering systems because it can reduce hallucinations and make answers easier to verify.
+
+In a simple RAG system, the knowledge source may be Wikipedia pages, local documents, or a vector database. The quality of the retrieved passages strongly affects the final answer. If the retriever finds weak evidence, the generator may still produce a fluent but unreliable response.

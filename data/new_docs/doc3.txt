@@ -1,0 +1,5 @@
+Sentence Embeddings
+
+Sentence embeddings are dense vector representations of text that capture meaning at the sentence or passage level. Unlike simple keyword counts, embeddings place semantically similar texts near each other in vector space. This makes them useful for retrieval, clustering, semantic search, and recommendation.
+
+Modern sentence embeddings are often produced by transformer models trained on large text corpora. A model such as all-MiniLM-L6-v2 can transform a query into a fixed-length vector that a search engine can compare against stored document vectors. When the embedding model is strong, retrieval can work even if the exact words do not match.

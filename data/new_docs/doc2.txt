@@ -1,0 +1,5 @@
+Cosine Similarity
+
+Cosine similarity measures how close two vectors are by comparing the angle between them. It ignores the overall length of the vectors and focuses on their direction, which makes it useful for text embeddings and other high-dimensional data. In retrieval systems, a higher cosine similarity usually means that two passages are more semantically related.
+
+The score is often used in vector databases, search engines, and recommendation systems. When documents are embedded into the same vector space, cosine similarity can help rank the most relevant items for a query. It is especially common in natural language processing because embeddings are usually normalized before search.

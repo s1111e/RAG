@@ -1,0 +1,5 @@
+Vector Database
+
+A vector database stores embeddings and supports fast similarity search over them. Instead of matching exact words, it finds nearby vectors using metrics such as cosine similarity or Euclidean distance. This design is useful when the meaning of the text matters more than the exact surface form.
+
+Vector databases often store metadata alongside each embedding, such as a title, source URL, or document type. That extra information helps downstream systems cite sources and filter results. In a retrieval pipeline, the database acts as the bridge between the query embedding and the text passages that support the final answer.

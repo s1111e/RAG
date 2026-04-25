@@ -1,0 +1,6 @@
+chromadb
+datasets
+sentence-transformers
+torch
+tqdm
+requests
