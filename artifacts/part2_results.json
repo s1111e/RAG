@@ -1,0 +1,94 @@
+{
+  "queries": [
+    {
+      "mode": "targeted",
+      "query": "What is retrieval augmented generation?",
+      "chosen_collection": "new_docs",
+      "wiki_top_source": "Serialism",
+      "new_top_source": "Serialism",
+      "answer_first_two_sentences": "I could not find enough supporting context to answer confidently.",
+      "grounding_judgment": "ungrounded"
+    },
+    {
+      "mode": "targeted",
+      "query": "Why is cosine similarity useful in vector search?",
+      "chosen_collection": "new_docs",
+      "wiki_top_source": "Similarity",
+      "new_top_source": "Similarity",
+      "answer_first_two_sentences": "I could not find enough supporting context to answer confidently.",
+      "grounding_judgment": "ungrounded"
+    },
+    {
+      "mode": "targeted",
+      "query": "What are sentence embeddings?",
+      "chosen_collection": "new_docs",
+      "wiki_top_source": "Sentence",
+      "new_top_source": "Sentence",
+      "answer_first_two_sentences": "I could not find enough supporting context to answer confidently.",
+      "grounding_judgment": "ungrounded"
+    },
+    {
+      "mode": "targeted",
+      "query": "How does a vector database store embeddings?",
+      "chosen_collection": "new_docs",
+      "wiki_top_source": "Internet Movie Database",
+      "new_top_source": "Internet Movie Database",
+      "answer_first_two_sentences": "I could not find enough supporting context to answer confidently.",
+      "grounding_judgment": "ungrounded"
+    },
+    {
+      "mode": "targeted",
+      "query": "What is Chroma used for?",
+      "chosen_collection": "new_docs",
+      "wiki_top_source": "Chromium",
+      "new_top_source": "Chromium",
+      "answer_first_two_sentences": "I could not find enough supporting context to answer confidently.",
+      "grounding_judgment": "ungrounded"
+    },
+    {
+      "mode": "cross-corpus",
+      "query": "How can Wikipedia pages and retrieval augmented generation work together?",
+      "chosen_collection": "wiki",
+      "wiki_top_source": "Everything2",
+      "new_top_source": "n/a",
+      "answer_first_two_sentences": "Everything2 or E2 is a website. It lets people make pages about many different things, and some people use it as a diary.",
+      "grounding_judgment": "grounded"
+    },
+    {
+      "mode": "cross-corpus",
+      "query": "What is the difference between cosine similarity and encyclopedia search?",
+      "chosen_collection": "wiki",
+      "wiki_top_source": "Similarity",
+      "new_top_source": "n/a",
+      "answer_first_two_sentences": "Similarity can mean: In mathematics: Similarity (geometry), when a shape looks the same as another shape, but has a different size or rotation Matrix similarity, a relation between matrices In computer science: String metric, or string similarity Semantic similarity in computational linguistics In other fields: In psychology, similarity (psychology) In music, musical similarity In chemistry, chemical similarity Related pages Difference Equality (mathematics) Identity (philosophy) Similarity. An encyclopedia (also known in English as an encyclopædia) is a collection (usually a book or website) of information.",
+      "grounding_judgment": "grounded"
+    },
+    {
+      "mode": "cross-corpus",
+      "query": "How do sentence embeddings help retrieve Wikipedia articles?",
+      "chosen_collection": "wiki",
+      "wiki_top_source": "Wikipedia",
+      "new_top_source": "n/a",
+      "answer_first_two_sentences": "Wikipedia() is a free online encyclopedia website in 336 languages of the world. 324 languages are currently active and 12 are closed.",
+      "grounding_judgment": "grounded"
+    },
+    {
+      "mode": "cross-corpus",
+      "query": "When is a vector database more useful than a general encyclopedia?",
+      "chosen_collection": "wiki",
+      "wiki_top_source": "Encyclopedia",
+      "new_top_source": "n/a",
+      "answer_first_two_sentences": "An encyclopedia (also known in English as an encyclopædia) is a collection (usually a book or website) of information. Some are called \"encyclopedic dictionaries\".",
+      "grounding_judgment": "grounded"
+    },
+    {
+      "mode": "cross-corpus",
+      "query": "How could local documents and Wikipedia sources answer the same question?",
+      "chosen_collection": "wiki",
+      "wiki_top_source": "Wikisource",
+      "new_top_source": "n/a",
+      "answer_first_two_sentences": "Wikisource – The Free Library – is a project by Wikimedia. Its goal is to make a free wiki library of source texts.",
+      "grounding_judgment": "grounded"
+    }
+  ]
+}

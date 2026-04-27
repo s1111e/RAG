@@ -1,3 +1,5 @@
+from turtle import distance
+
 import chromadb
 
 from config import CHROMA_PATH, TOP_K, WIKI_COLLECTION
@@ -35,7 +37,7 @@ def retrieve(query, top_k=TOP_K, collection_name=WIKI_COLLECTION):
 
 		metadata = metadatas[index] if index < len(metadatas) else {}
 		distance = float(distances[index]) if index < len(distances) else None
-		similarity = None if distance is None else round(1.0 - distance, 4)
+		similarity = None if distance is None else round(1.0 / (1.0 + distance), 4)
 		items.append(
 			{
 				"id": ids[index] if index < len(ids) else None,

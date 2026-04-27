@@ -31,7 +31,7 @@ CROSS_CORPUS_QUERIES = [
 def _grounding_judgment(answer, contexts):
 	if not contexts:
 		return "ungrounded"
-	if "sources:" in answer.lower():
+	if contexts and any(c["title"].lower() in answer.lower() for c in contexts):
 		return "grounded"
 	return "needs review"
 
@@ -43,7 +43,7 @@ def _choose_best_collection(query):
 	wiki_score = wiki_contexts[0]["similarity"] if wiki_contexts else float("-inf")
 	new_score = new_contexts[0]["similarity"] if new_contexts else float("-inf")
 
-	if new_score >= wiki_score:
+	if new_score > wiki_score + 0.05:
 		return NEW_COLLECTION, new_contexts, wiki_contexts
 	return WIKI_COLLECTION, wiki_contexts, new_contexts
 
@@ -76,14 +76,14 @@ def _summarize_result(query, mode, chosen_collection, chosen_contexts, other_con
 		"query": query,
 		"chosen_collection": chosen_collection,
 		"wiki_top_source": (
-			f"{other_contexts[0]['title']} ({round(other_contexts[0]['similarity'], 4)})"
+			other_contexts[0]["title"]
 			if chosen_collection == NEW_COLLECTION and other_contexts
-			else f"{chosen_contexts[0]['title']} ({round(chosen_contexts[0]['similarity'], 4)})" if chosen_contexts else "n/a"
+			else chosen_contexts[0]["title"] if chosen_contexts else "n/a"
 		),
 		"new_top_source": (
-			f"{chosen_contexts[0]['title']} ({round(chosen_contexts[0]['similarity'], 4)})"
+			chosen_contexts[0]["title"]
 			if chosen_collection == NEW_COLLECTION and chosen_contexts
-			else f"{other_contexts[0]['title']} ({round(other_contexts[0]['similarity'], 4)})" if other_contexts else "n/a"
+			else other_contexts[0]["title"] if other_contexts else "n/a"
 		),
 		"answer_first_two_sentences": first_sentences(answer_body, 2),
 		"grounding_judgment": _grounding_judgment(answer, answer_data["contexts"]),

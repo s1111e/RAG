@@ -68,8 +68,7 @@ def main():
 		rows.append(
 			{
 				"query": query,
-				"top_source": f"{top.get('title', 'n/a')} ({round(top.get('similarity', 0), 4) if top.get('similarity') is not None else 'n/a'})",
-				"top_score": round(top.get("similarity", 0), 4) if top.get("similarity") is not None else "n/a",
+				"top_source": f"{top.get('title', 'n/a')} - {top.get('url', '')} (score={round(top.get('similarity', 0), 4) if top.get('similarity') is not None else 'n/a'})",				"top_score": round(top.get("similarity", 0), 4) if top.get("similarity") is not None else "n/a",
 				"answer_first_two_sentences": first_sentences(answer_body, 2),
 				"grounding_judgment": _grounding_judgment(answer, contexts),
 			}
