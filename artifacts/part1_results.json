@@ -4,70 +4,70 @@
       "query": "What is the Moon?",
       "top_source": "Natural satellite -  (score=0.5729)",
       "top_score": 0.5729,
-      "answer_first_two_sentences": "A natural satellite in astronomy is a smaller body which moves around a larger body. The smaller body is held in orbit by gravitation.",
-      "grounding_judgment": "grounded"
+      "answer_first_two_sentences": "The Moon is a smaller body that moves around a larger body. It is held in orbit by the larger body, which is likely Earth.",
+      "grounding_judgment": "needs review"
     },
     {
       "query": "What is photosynthesis?",
       "top_source": "Photosynthesis -  (score=0.6432)",
       "top_score": 0.6432,
-      "answer_first_two_sentences": "Photosynthesis is how plants and some microorganisms make carbohydrates. It is an endothermic (takes in heat) chemical process which uses sunlight to turn carbon dioxide into sugars.",
+      "answer_first_two_sentences": "Photosynthesis is how plants and some microorganisms make carbohydrates [1]. It involves the use of sunlight as a source of energy [1].",
       "grounding_judgment": "grounded"
     },
     {
       "query": "Who was Albert Einstein?",
       "top_source": "Albert Einstein -  (score=0.5968)",
       "top_score": 0.5968,
-      "answer_first_two_sentences": "Albert Einstein (14 March 1879 – 18 April 1955) was a German-born American scientist. He worked on theoretical physics.",
+      "answer_first_two_sentences": "Albert Einstein was a German-born American scientist [1]. He worked on theoretical physics [1].",
       "grounding_judgment": "grounded"
     },
     {
       "query": "What is a volcano?",
       "top_source": "Volcano -  (score=0.6239)",
       "top_score": 0.6239,
-      "answer_first_two_sentences": "A volcano is a mountain that has lava (hot, liquid rock) coming out from a magma chamber under the ground, or did have in the past. Volcanoes are formed by the movement of tectonic plates.",
+      "answer_first_two_sentences": "A volcano is a mountain that has lava coming out from a magma chamber under the ground [1]. This lava is a result of magma eruption onto the Earth's surface [2].",
       "grounding_judgment": "grounded"
     },
     {
       "query": "What is an algorithm?",
       "top_source": "Computer science -  (score=0.4883)",
       "top_score": 0.4883,
-      "answer_first_two_sentences": "Computer science deals with the theoretical foundations of computation and practical techniques for their application. Computer science is the science of information.",
-      "grounding_judgment": "grounded"
+      "answer_first_two_sentences": "An algorithm is a list of instructions that tell a computer what to do [2]. It is a set of rules that a computer follows to solve a problem or perform a task [1].",
+      "grounding_judgment": "needs review"
     },
     {
       "query": "What is the Taj Mahal?",
       "top_source": "Taj Mahal -  (score=0.6201)",
       "top_score": 0.6201,
-      "answer_first_two_sentences": "The Taj Mahal is an Islamic religious building, mosque and tomb in India. It was built in the 17th century by Emperor Shah Jahan in memory of his wife, Mumtaz Mahal.",
+      "answer_first_two_sentences": "The Taj Mahal is an Islamic religious building, mosque and tomb in India. It was built in the 17th century by Emperor Shah Jahan [1].",
       "grounding_judgment": "grounded"
     },
     {
       "query": "What is a rainforest?",
       "top_source": "Jungle -  (score=0.6078)",
       "top_score": 0.6078,
-      "answer_first_two_sentences": "The jungle is a place in a rainforest where the forest floor is covered with plants. Like other rainy places, they have many rivers or streams.",
-      "grounding_judgment": "grounded"
+      "answer_first_two_sentences": "A rainforest is a forest that gets heavy rainfall. [2] It is typically found in the tropics or subtropics.",
+      "grounding_judgment": "needs review"
     },
     {
       "query": "What is the Internet?",
       "top_source": "Internet -  (score=0.5983)",
       "top_score": 0.5983,
-      "answer_first_two_sentences": "The Internet is the biggest world-wide communication network of computers. The Internet has a lot of smaller domestic, academic, business, and government networks, which together carry many different kinds of information.",
+      "answer_first_two_sentences": "The Internet is the biggest world-wide communication network of computers [1]. It is a network of computers [1].",
       "grounding_judgment": "grounded"
     },
     {
       "query": "What is a gene?",
       "top_source": "Gene -  (score=0.6231)",
       "top_score": 0.6231,
-      "answer_first_two_sentences": "Genes are parts of DNA. DNA is a molecule inside a cell that carries the instructions for making the proteins the cell will need.",
+      "answer_first_two_sentences": "A gene is a part of DNA. [1] Gene: Genes are parts of DNA.",
       "grounding_judgment": "grounded"
     },
     {
       "query": "What is the United Nations?",
       "top_source": "United Nations -  (score=0.657)",
       "top_score": 0.657,
-      "answer_first_two_sentences": "The United Nations (UN) is an organization between countries established on 24 October 1945 to promote international cooperation. It was founded to replace the League of Nations following World War II and to prevent another conflict.",
+      "answer_first_two_sentences": "The United Nations is an organization between countries established on 24 October 1945. It aims to promote international cooperation and peace.",
       "grounding_judgment": "grounded"
     }
   ]

@@ -1,2 +1,6 @@
 chroma_db/
 keys.txt
+.env
+.env.local
+FINAL_SUBMISSION_STATUS.md
+scripts\test_llm_endpoints.py

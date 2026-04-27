@@ -1,21 +1,27 @@
 # HW4 – Retrieval Augmented Generation (RAG) Pipeline
 
-## Track: Track A
+## Track Declaration
 
-This project implements a **Retrieval Augmented Generation (RAG) system** that combines information retrieval with grounded text generation.
+**Track: A – Text RAG**
+
+### Implementation Choice: MiniLM Alternative Path
+Per the assignment specification, I implemented the simpler alternative path: using `sentence-transformers/all-MiniLM-L6-v2` for both the starter corpus embedding and new document embedding. This avoids external API keys while maintaining full reproducibility on CPU. The starter corpus is loaded from `wikimedia/wikipedia` (Simple English, ~10,000 passages) and embedded locally, then extended with 5 supplementary local documents, all in a consistent 384-dimensional vector space.
 
 ## Overview
+
+The project implements a **Retrieval Augmented Generation (RAG) system** that combines information retrieval with grounded text generation.
 
 The pipeline consists of:
 
 1. **Corpus Ingestion**
-   - **Primary corpus**: Timescale pre-embedded Simple English Wikipedia dataset (`timescale/wikipedia-22-12-simple-embeddings`)
+   - **Primary corpus**: Simple English Wikipedia dataset (`wikimedia/wikipedia`, config: `20231101.simple`)  
    - **Secondary corpus**: Local Wikipedia-style documents stored in `data/new_docs/`
+   - **Embedding Strategy**: All documents (starter and new) embedded with `sentence-transformers/all-MiniLM-L6-v2` (384-dim) for consistency
    
 2. **Embedding & Storage**
-   - Embeddings from Timescale dataset are ingested as-is (pre-computed)
-   - Local documents are embedded using `sentence-transformers/all-MiniLM-L6-v2`
+   - All documents embedded locally using MiniLM on CPU
    - Both stored in Chroma vector database with metadata (title, URL, source)
+   - Consistent 384-dim vector space across both collections
 
 3. **Retrieval & Generation**
    - Query embedding via `sentence-transformers/all-MiniLM-L6-v2`
@@ -26,7 +32,7 @@ The pipeline consists of:
 ## Datasets & Models Used
 
 ### Datasets
-- `timescale/wikipedia-22-12-simple-embeddings` – Pre-embedded Simple English Wikipedia corpus
+- `wikimedia/wikipedia` (config: `20231101.simple`) – Simple English Wikipedia corpus (10,000 passages)
 - Local supplementary documents in `data/new_docs/` (5 files):
   - doc1.txt: Retrieval Augmented Generation
   - doc2.txt: Cosine Similarity
@@ -35,8 +41,8 @@ The pipeline consists of:
   - doc5.txt: Simple English Wikipedia
 
 ### Models
-- **Embedding Model**: `sentence-transformers/all-MiniLM-L6-v2` (384-dim)
-- **LLM Model**: `llama-3.3-70b-instruct-awq` (OpenAI-compatible API at `http://10.246.100.230/v1`)
+- **Embedding Model**: `sentence-transformers/all-MiniLM-L6-v2` (384-dim, used for all documents)
+- **LLM Model**: `meta-llama/Llama-3.1-8B-Instruct` (OpenAI-compatible API at UTSA_MODEL)
 
 ## Project Structure
 
@@ -53,7 +59,7 @@ HW4/
 │   ├── llm_client.py        (LLM API wrapper)
 │   └── utils.py             (helpers: whitespace, sentences, file I/O)
 ├── scripts/
-│   ├── ingest_wiki.py       (ingest Timescale dataset into wiki collection)
+│   ├── ingest_wiki.py       (load Wikipedia dataset and embed with MiniLM)
 │   ├── ingest_new_docs.py   (ingest local .txt files into new_docs collection)
 │   ├── run_part1.py         (execute 10 starter queries, generate Part1 results)
 │   ├── run_part2.py         (execute targeted + cross-corpus queries, generate Part2 results)
@@ -71,9 +77,9 @@ HW4/
 pip install -r requirements.txt
 ```
 
-### 2. Ingest the starter corpus (Timescale Wikipedia)
+### 2. Ingest the starter corpus (Wikipedia dataset with local MiniLM embedding)
 ```bash
-python scripts/ingest_wiki.py --max-docs 3000
+python scripts/ingest_wiki.py --max-docs 10000
 ```
 
 ### 3. Ingest local supplementary documents
@@ -103,6 +109,7 @@ Output: `artifacts/part2_results.md` and `artifacts/part2_results.json`
 
 ## Notes
 
-- The LLM API at `http://10.246.100.230/v1` may not always be available; in such cases, the extractive fallback provides grounded answers from the top-k retrieved passages.
-- Embedding dimensions: Timescale dataset vectors are ~768-dim (Cohere embeddings); MiniLM vectors are 384-dim. Chroma handles mixed dimensions.
+- The LLM API at UTSA endpoint provides access to Llama-3.1-8B-Instruct; if unavailable, the extractive fallback provides grounded answers from top-k retrieved passages.
+- All configuration loaded from `config.py` and `.env` (environment variables for API credentials)
+- Embedding dimensions: All documents embedded with MiniLM at 384-dim for consistency.
 - Chroma is configured for cosine similarity (hnsw:space = "cosine").

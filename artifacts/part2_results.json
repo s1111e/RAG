@@ -5,89 +5,89 @@
       "query": "What is retrieval augmented generation?",
       "chosen_collection": "new_docs",
       "wiki_top_source": "Serialism",
-      "new_top_source": "Serialism",
-      "answer_first_two_sentences": "I could not find enough supporting context to answer confidently.",
-      "grounding_judgment": "ungrounded"
+      "new_top_source": "Doc1",
+      "answer_first_two_sentences": "Retrieval augmented generation, often shortened to RAG, is an approach that combines information retrieval and text generation. It retrieves relevant information from a large corpus and uses it to augment the generated text [1].",
+      "grounding_judgment": "needs review"
     },
     {
       "mode": "targeted",
       "query": "Why is cosine similarity useful in vector search?",
       "chosen_collection": "new_docs",
       "wiki_top_source": "Similarity",
-      "new_top_source": "Similarity",
-      "answer_first_two_sentences": "I could not find enough supporting context to answer confidently.",
-      "grounding_judgment": "ungrounded"
+      "new_top_source": "Doc2",
+      "answer_first_two_sentences": "Cosine similarity is useful in vector search because it measures how close two vectors are by comparing the angle between them [1]. This allows for efficient comparison of vectors in a vector database, supporting fast similarity search [2].",
+      "grounding_judgment": "needs review"
     },
     {
       "mode": "targeted",
       "query": "What are sentence embeddings?",
       "chosen_collection": "new_docs",
       "wiki_top_source": "Sentence",
-      "new_top_source": "Sentence",
-      "answer_first_two_sentences": "I could not find enough supporting context to answer confidently.",
-      "grounding_judgment": "ungrounded"
+      "new_top_source": "Doc3",
+      "answer_first_two_sentences": "Sentence embeddings are dense vector representations of text that capture meaning at the sentence level [1]. They are used to compare the similarity between sentences.",
+      "grounding_judgment": "needs review"
     },
     {
       "mode": "targeted",
       "query": "How does a vector database store embeddings?",
       "chosen_collection": "new_docs",
       "wiki_top_source": "Internet Movie Database",
-      "new_top_source": "Internet Movie Database",
-      "answer_first_two_sentences": "I could not find enough supporting context to answer confidently.",
-      "grounding_judgment": "ungrounded"
+      "new_top_source": "Doc4",
+      "answer_first_two_sentences": "A vector database stores embeddings by supporting fast similarity search over them [1]. This is done by storing the embeddings in a way that allows for efficient comparison and retrieval [1].",
+      "grounding_judgment": "needs review"
     },
     {
       "mode": "targeted",
       "query": "What is Chroma used for?",
       "chosen_collection": "new_docs",
       "wiki_top_source": "Chromium",
-      "new_top_source": "Chromium",
-      "answer_first_two_sentences": "I could not find enough supporting context to answer confidently.",
-      "grounding_judgment": "ungrounded"
+      "new_top_source": "Doc2",
+      "answer_first_two_sentences": "I don't know.",
+      "grounding_judgment": "grounded"
     },
     {
       "mode": "cross-corpus",
       "query": "How can Wikipedia pages and retrieval augmented generation work together?",
-      "chosen_collection": "wiki",
+      "chosen_collection": "new_docs",
       "wiki_top_source": "Everything2",
-      "new_top_source": "n/a",
-      "answer_first_two_sentences": "Everything2 or E2 is a website. It lets people make pages about many different things, and some people use it as a diary.",
+      "new_top_source": "Doc1",
+      "answer_first_two_sentences": "RAG can work with Wikipedia pages by retrieving relevant information from Wikipedia and using it as input for the generation model. This allows the model to leverage the vast knowledge base of Wikipedia to generate more accurate and informative text.",
       "grounding_judgment": "grounded"
     },
     {
       "mode": "cross-corpus",
       "query": "What is the difference between cosine similarity and encyclopedia search?",
-      "chosen_collection": "wiki",
+      "chosen_collection": "new_docs",
       "wiki_top_source": "Similarity",
-      "new_top_source": "n/a",
-      "answer_first_two_sentences": "Similarity can mean: In mathematics: Similarity (geometry), when a shape looks the same as another shape, but has a different size or rotation Matrix similarity, a relation between matrices In computer science: String metric, or string similarity Semantic similarity in computational linguistics In other fields: In psychology, similarity (psychology) In music, musical similarity In chemistry, chemical similarity Related pages Difference Equality (mathematics) Identity (philosophy) Similarity. An encyclopedia (also known in English as an encyclopædia) is a collection (usually a book or website) of information.",
-      "grounding_judgment": "grounded"
+      "new_top_source": "Doc2",
+      "answer_first_two_sentences": "Cosine similarity measures how close two vectors are by comparing the angle between them, ignoring their magnitude [1]. It is a method for comparing the similarity of two vectors.",
+      "grounding_judgment": "needs review"
     },
     {
       "mode": "cross-corpus",
       "query": "How do sentence embeddings help retrieve Wikipedia articles?",
-      "chosen_collection": "wiki",
+      "chosen_collection": "new_docs",
       "wiki_top_source": "Wikipedia",
-      "new_top_source": "n/a",
-      "answer_first_two_sentences": "Wikipedia() is a free online encyclopedia website in 336 languages of the world. 324 languages are currently active and 12 are closed.",
-      "grounding_judgment": "grounded"
+      "new_top_source": "Doc3",
+      "answer_first_two_sentences": "Sentence embeddings help retrieve Wikipedia articles by capturing their meaning at the sentence level, allowing for more accurate and relevant search results [1]. This is particularly useful for Simple English Wikipedia, which uses shorter sentences and simpler vocabulary [2].",
+      "grounding_judgment": "needs review"
     },
     {
       "mode": "cross-corpus",
       "query": "When is a vector database more useful than a general encyclopedia?",
-      "chosen_collection": "wiki",
+      "chosen_collection": "new_docs",
       "wiki_top_source": "Encyclopedia",
-      "new_top_source": "n/a",
-      "answer_first_two_sentences": "An encyclopedia (also known in English as an encyclopædia) is a collection (usually a book or website) of information. Some are called \"encyclopedic dictionaries\".",
-      "grounding_judgment": "grounded"
+      "new_top_source": "Doc4",
+      "answer_first_two_sentences": "A vector database is more useful than a general encyclopedia when fast similarity search is required, as it stores embeddings and supports efficient matching [1]. This is particularly useful when comparing the angle between vectors, such as with cosine similarity [2].",
+      "grounding_judgment": "needs review"
     },
     {
       "mode": "cross-corpus",
       "query": "How could local documents and Wikipedia sources answer the same question?",
-      "chosen_collection": "wiki",
+      "chosen_collection": "new_docs",
       "wiki_top_source": "Wikisource",
-      "new_top_source": "n/a",
-      "answer_first_two_sentences": "Wikisource – The Free Library – is a project by Wikimedia. Its goal is to make a free wiki library of source texts.",
+      "new_top_source": "Doc5",
+      "answer_first_two_sentences": "Local documents and Wikipedia sources could answer the same question by providing similar information, as seen in [Doc5](file:///D:/VS/HW4/RAG/data/new_docs/doc5.txt) and [Doc1](file:///D:/VS/HW4/RAG/data/new_docs/doc1.txt) both discussing the topic of RAG. [Doc5](file:///D:/VS/HW4/RAG/data/new_docs/doc5.txt) mentions Wikipedia, which is a source of information that can be used to answer questions.",
       "grounding_judgment": "grounded"
     }
   ]

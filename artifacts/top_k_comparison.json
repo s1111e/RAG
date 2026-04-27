@@ -1,0 +1,107 @@
+[
+  {
+    "query": "What is photosynthesis?",
+    "top_k": 2,
+    "num_retrieved": 2,
+    "top_score": 0.44526177644729614,
+    "top_title": "Photosynthesis"
+  },
+  {
+    "query": "What is a volcano?",
+    "top_k": 2,
+    "num_retrieved": 2,
+    "top_score": 0.39716577529907227,
+    "top_title": "Volcano"
+  },
+  {
+    "query": "What is the Internet?",
+    "top_k": 2,
+    "num_retrieved": 2,
+    "top_score": 0.3285776376724243,
+    "top_title": "Internet"
+  },
+  {
+    "query": "Who was Albert Einstein?",
+    "top_k": 2,
+    "num_retrieved": 2,
+    "top_score": 0.32426148653030396,
+    "top_title": "Albert Einstein"
+  },
+  {
+    "query": "What is the Taj Mahal?",
+    "top_k": 2,
+    "num_retrieved": 2,
+    "top_score": 0.38731157779693604,
+    "top_title": "Taj Mahal"
+  },
+  {
+    "query": "What is photosynthesis?",
+    "top_k": 4,
+    "num_retrieved": 4,
+    "top_score": 0.44526177644729614,
+    "top_title": "Photosynthesis"
+  },
+  {
+    "query": "What is a volcano?",
+    "top_k": 4,
+    "num_retrieved": 4,
+    "top_score": 0.39716577529907227,
+    "top_title": "Volcano"
+  },
+  {
+    "query": "What is the Internet?",
+    "top_k": 4,
+    "num_retrieved": 4,
+    "top_score": 0.3285776376724243,
+    "top_title": "Internet"
+  },
+  {
+    "query": "Who was Albert Einstein?",
+    "top_k": 4,
+    "num_retrieved": 4,
+    "top_score": 0.32426148653030396,
+    "top_title": "Albert Einstein"
+  },
+  {
+    "query": "What is the Taj Mahal?",
+    "top_k": 4,
+    "num_retrieved": 4,
+    "top_score": 0.38731157779693604,
+    "top_title": "Taj Mahal"
+  },
+  {
+    "query": "What is photosynthesis?",
+    "top_k": 8,
+    "num_retrieved": 8,
+    "top_score": 0.44526177644729614,
+    "top_title": "Photosynthesis"
+  },
+  {
+    "query": "What is a volcano?",
+    "top_k": 8,
+    "num_retrieved": 8,
+    "top_score": 0.39716577529907227,
+    "top_title": "Volcano"
+  },
+  {
+    "query": "What is the Internet?",
+    "top_k": 8,
+    "num_retrieved": 8,
+    "top_score": 0.3285776376724243,
+    "top_title": "Internet"
+  },
+  {
+    "query": "Who was Albert Einstein?",
+    "top_k": 8,
+    "num_retrieved": 8,
+    "top_score": 0.32426148653030396,
+    "top_title": "Albert Einstein"
+  },
+  {
+    "query": "What is the Taj Mahal?",
+    "top_k": 8,
+    "num_retrieved": 8,
+    "top_score": 0.38731157779693604,
+    "top_title": "Taj Mahal"
+  }
+]
